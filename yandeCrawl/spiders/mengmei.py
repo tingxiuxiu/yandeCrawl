@@ -7,8 +7,12 @@ from yandeCrawl.items import YandecrawlItem
 
 class MengmeiSpider(CrawlSpider):
     name = 'mengmei'
-    allowed_domains = ['yande.re', 'files.yande.re']
-    start_urls = ['https://yande.re/post']
+    # 爬取y站
+    # allowed_domains = ['yande.re', 'files.yande.re']
+    # start_urls = ['https://yande.re/post']
+    # 爬取k站
+    allowed_domains = ['konachan.com']
+    start_urls = ['http://konachan.com/post']
 
     rules = (
         Rule(LinkExtractor(allow=r'/post\?page=+\d'), callback='parse_page', follow=True),

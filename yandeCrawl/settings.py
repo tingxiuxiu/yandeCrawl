@@ -103,3 +103,4 @@ ITEM_PIPELINES = {
 
 #配置图片下载路径,供image管道使用
 IMAGES_STORE = os.path.join(os.path.dirname(__file__), 'images')
+print(IMAGES_STORE)
