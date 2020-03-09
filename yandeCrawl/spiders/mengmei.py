@@ -19,7 +19,7 @@ class MengmeiSpider(CrawlSpider):
         category = 'dongman'
         view_urls = response.xpath('//div/ul[@id="post-list-posts"]/li')
         for url in view_urls:
-            image_url = url.xpath('./a[@class="directlink smallimg"]/@href')
+            image_url = url.xpath('./a/@href')
             print(image_url)
             # yield YandecrawlItem(image_urls=image_url, category=category)
 
